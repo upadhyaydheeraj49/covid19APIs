@@ -52,7 +52,7 @@ app.post('/login/', async (request, response) => {
 
 const authenticateToken = async (request, response, next) => {
   let jwtToken
-  authHeader = request.headers['authentication']
+  authHeader = request.headers['authorization']
 
   if (authHeader !== undefined) {
     //take out the token
